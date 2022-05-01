@@ -94,3 +94,18 @@ mennyi = str(mennyi)
 mennyi = mennyi.replace(".",",")
 
 print(f"4. feladat: {hanyszor} fuvar alatt: {mennyi}$")
+
+#5
+
+bank = len([sor for sor in lista if sor.fizetes_modja == "bankkártya"])
+keszpenz = len([sor for sor in lista if sor.fizetes_modja == "készpénz"])
+vitatott = len([sor for sor in lista if sor.fizetes_modja == "vitatott"])
+ingyenes = len([sor for sor in lista if sor.fizetes_modja == "ingyenes"])
+ismeretlen = len([sor for sor in lista if sor.fizetes_modja == "ismeretlen"])
+
+print(f"""5. feladat:
+      bankkártya: {bank}
+      Készpénz: {keszpenz}
+      vitatott: {vitatott}
+      ingyenes: {ingyenes}
+      ismeretlen: {ismeretlen}""")
