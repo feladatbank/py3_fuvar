@@ -78,3 +78,8 @@ class Fuvar:
 with open("fuvar.csv","r",encoding="utf-8") as f:
   fejlec = f.readline()
   lista = [Fuvar(sor) for sor in f]
+
+
+#3
+  
+print(f"3. feladat: {len(lista)} fuvar")
