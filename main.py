@@ -83,3 +83,14 @@ with open("fuvar.csv","r",encoding="utf-8") as f:
 #3
   
 print(f"3. feladat: {len(lista)} fuvar")
+
+#4
+
+taxi = [ sor.viteldij for sor in lista if sor.taxi_id == 6185]
+
+mennyi = sum(taxi)
+hanyszor = len(taxi)
+mennyi = str(mennyi)
+mennyi = mennyi.replace(".",",")
+
+print(f"4. feladat: {hanyszor} fuvar alatt: {mennyi}$")
