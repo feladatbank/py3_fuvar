@@ -53,4 +53,28 @@ _______________________________________________________________________
 
 """
 
+# taxi_id;
+#indulas;
+#idotartam;
+#tavolsag;
+#viteldij;
+#borravalo;
+#fizetes_modja
+# 5240;2016-12-15 23:45:00;900;2,5;10,75;2,45;bankkártya
 
+#1-2
+
+class Fuvar:
+  def __init__(self,sor):
+    taxi_id, indulas, idotartam, tavolsag, viteldij, borravalo, fizetes_modja = sor.strip().split(";")
+    self.taxi_id = int(taxi_id)
+    self.indulas = indulas
+    self.idotartam = int(idotartam)
+    self.tavolsag = float(tavolsag.replace(",","."))
+    self.viteldij = float(viteldij.replace(",","."))
+    self.borravalo = float(borravalo.replace(",","."))
+    self.fizetes_modja = fizetes_modja
+
+with open("fuvar.csv","r",encoding="utf-8") as f:
+  fejlec = f.readline()
+  lista = [Fuvar(sor) for sor in f]
